@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/stylesheet.css">
+    <script src="/static/bootstrap.bundle.min.js"></script>
+    <script src="/static/view.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vgv5zuw.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MASSIMO ALBANESE</title>
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
+    <meta name="description" content="Professional Media Corruption Solutions.">
+</head>
+<body onload="">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-auto  fixed-top" style="display: block; ">
+    <div class="container mx-auto"
+         style=" padding: 0; background-image: linear-gradient(90deg, #00C6FF, #FF00F6); background-size: 100vw; background-position: center">
+        <!--        <div class="navbar-brand glitch-container brand-centered d-flex " style="pointer-events: none">-->
+        <a href="/" class="navbar-brand glitch-container brand-centered2 d-flex ">
+            <span style="font-size: 25px; font-style: italic; font-weight: bold; text-transform: uppercase; font-family: 'The Neue'">MASSIMO ALBANESE</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li id="nav-about" class="transparent-background nav-item text-center " onclick="switch_tab('about')">
+                    <span class="nav-link">ABOUT</span>
+                </li>
+                <li id="nav-projects" class="nav-item text-center " onclick="switch_tab('projects')">
+                    <span class="nav-link">PROJECTS</span>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="/resume" target="_blank" class="nav-link">RESUME</a>
+                </li>
+            </ul>
+            <div class="bg-dark d-block" style="width: 100%; height: 40px"></div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item text-center">
+                    <a href="https://madlitch.cc/" target="_blank" class="nav-link">ART</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="https://github.com/madlitch" target="_blank" class="nav-link">GITHUB</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="https://www.linkedin.com/in/massimo-albanese/" target="_blank"
+                       class="nav-link">LINKEDIN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-gradient-bar"></div>
+</nav>
+<header style="background-image: linear-gradient(90deg, #00C6FF, #FF00F6); overflow: hidden">
+    <div class=" bg-dark text-center h-100 " style="overflow: hidden">
+        <div id="about"
+             class="tab row d-inline-block justify-content-center h-100 text-center align-items-center align-middle"
+             style="overflow: hidden; margin-top: -10%">
+            <div class="">
+                <div class="" style="white-space: nowrap;">
+                    <div class="mb-2 index-title">
+                        <h1 class="d-inline m-0 p-0" style="font-size: 4rem">Hi, I'm </h1>
+                        <div class="d-inline-block ">
+                            <h1 class="m-0 p-0" style="font-size: 4rem; line-height: 0.8">Massimo</h1>
+                            <div style="background-image: linear-gradient(90deg, #00C6FF, #FF00F6); height: 4px;"></div>
+                        </div>
+                        <h1 class="d-inline m-0 p-0" style="font-size: 4rem">.</h1>
+                    </div>
+                    <h6>I am a 3rd year Software Engineering Student at Ontario Tech University, <br>
+                        I also founded and lead the development at <a target="_blank" class="pinkText"
+                                                                      href="https://madpixel.software/">MADPIXEL
+                            Software</a>.
+                    </h6>
+                    <h6><span class="pinkText">Currently: </span>looking for an internship for Summer 2023.</h6>
+                    <h6>Get in touch via email: <a class="pinkText"
+                                                   href="mailto:massimo@albane.se">massimo@albane.se</a>
+                    </h6>
+
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="tab bg-dark text-center h-100 d-inline-block"
+             style="background-color: #222222; padding-top: 2vh; width: 0;">
+            <div style="width: 100vw; height: 100%; overflow: hidden">
+                <div class="container mt-5" style="height: 3%">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center justify-content-center h-100">
+                                <div class="text-center">
+                                    <div class="d-inline-block mx-4 my-0 cursor-pointer"
+                                         onclick="switch_projects('all')">
+                                        <h3 class="blue m-0 p-0 bg-dark" style="line-height: 1">ALL</h3>
+                                        <div class="underline-highlight"></div>
+                                    </div>
+                                    <div class="d-inline-block mx-4 my-0 cursor-pointer"
+                                         onclick="switch_projects('current')">
+                                        <h3 class="blue m-0 p-0 bg-dark" style="line-height: 1">CURRENT</h3>
+                                        <div class="underline-highlight zero-width"></div>
+                                    </div>
+                                    <div class="d-inline-block mx-4 my-0 cursor-pointer"
+                                         onclick="switch_projects('highlight')">
+                                        <h3 class="blue m-0 p-0 bg-dark" style="line-height: 1">HIGHLIGHTS</h3>
+                                        <div class="underline-highlight zero-width"></div>
+                                    </div>
+                                    <div class="d-inline-block mx-4 my-0 cursor-pointer"
+                                         onclick="switch_projects('school')">
+                                        <h3 class="blue m-0 p-0 bg-dark">SCHOOL</h3>
+                                        <div class="underline-highlight zero-width"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 95%; overflow: scroll">
+                    <div class="project current">
+                        <div class="container mt-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1 class="mb-0">MADGLITCH</h1>
+                                            <h6 class="pinkText">CURRENT</h6>
+                                            <h6>COMMERCIAL APPLICATION</h6>
+                                            <h6>2022</h6>
+                                            <h6 class="blueText">IN DEVELOPMENT</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Unreleased cross-platform desktop and mobile app for
+                                                            producing
+                                                            glitch
+                                                            effects using Flutter, Dart, and Rust
+                                                        </li>
+                                                        <li>Custom Rust algorithms for image processing, including pixel
+                                                            sorting, audio
+                                                            convolutions on image data, and filters
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project current highlight">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1 class="mb-0">MADPIXELSORT</h1>
+                                            <h6 class="pinkText">CURRENT | HIGHLIGHTS</h6>
+                                            <h6>COMMERCIAL APPLICATION</h6>
+                                            <h6>2021</h6>
+                                            <a target="_blank" class="blueText"
+                                               href="https://madpixel.software/madpixelsort"><h6>
+                                                madpixel.software/madpixelsort</h6></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Cross-platform desktop app for producing pixel sorting
+                                                            effects
+                                                            using
+                                                            Electron and Neon Bindings
+                                                        </li>
+                                                        <li>Single-handedly conceptualized, built, and brought to market
+                                                            with
+                                                            commercial
+                                                            success
+                                                        </li>
+                                                        <li>Implemented a multi-threaded Rust algorithm that can sort 24
+                                                            million
+                                                            pixels
+                                                            in under 500 ms
+                                                        </li>
+                                                        <li>Designed an intuitive & responsive UI from scratch in HTML,
+                                                            CSS,
+                                                            JavaScript,
+                                                            and JQuery
+                                                        </li>
+                                                        <li>Keyframing/effect animation system to allow smooth
+                                                            transitions
+                                                            in
+                                                            animations
+                                                            and video
+                                                        </li>
+                                                        <li>Implemented a custom cryptographic DRM/activation system,
+                                                            tying a license key activation to a user on a per machine
+                                                            basis
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project current highlight">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1>MADPIXEL.SOFTWARE</h1>
+                                            <h6 class="pinkText">CURRENT | HIGHLIGHTS</h6>
+                                            <h6>COMPANY WEBSITE / BACKEND API</h6>
+                                            <h6>2021</h6>
+                                            <a target="_blank" class="blueText" href="https://madpixel.software"><h6>
+                                                madpixel.software</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Official website for my company, MADPIXEL SOFTWARE INC.</li>
+                                                        <li>Website built from scratch with Bootstrap, jQuery, and Sass,
+                                                            with
+                                                            custom CSS
+                                                            text glitch effects
+                                                        </li>
+                                                        <li>Python (FastAPI) Async REST backend server for website
+                                                            hosting,
+                                                            app
+                                                            licensing, and payment processing
+                                                        </li>
+                                                        <li>PostgreSQL database using SQLAlchemy ORM mapping for
+                                                            customer
+                                                            and
+                                                            licensing
+                                                            information
+                                                        </li>
+                                                        <li>Webserver and database hosted within respective Docker
+                                                            containers
+                                                            using
+                                                            Docker Compose
+                                                        </li>
+                                                        <li>Stripe integration for payment processing with Stripe
+                                                            Checkout
+                                                        </li>
+                                                        <!--                                        <li></li>-->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1>PLANIT</h1>
+                                            <h6>COMMERCIAL APPLICATION / BACKEND API</h6>
+                                            <h6>2019 - 2022</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Unreleased iOS & Android social mobile app</li>
+                                                        <li>Designed, prototyped, and iterated a frontend UI in Framer
+                                                        </li>
+                                                        <li>Designed and implemented a production ready database schema
+                                                            including user
+                                                            relations
+                                                            (friends/groups), user interests, location history,
+                                                            messaging,
+                                                            events,
+                                                            venues, and more
+                                                        </li>
+                                                        <li>Implemented an algorithm finding the median coordinate from
+                                                            a
+                                                            list of user coordinates, then querying Google Places for
+                                                            relevant
+                                                            venues
+                                                            around the median based on user interests
+                                                        </li>
+                                                        <li>Wrote an async REST API with user, friend, event, and
+                                                            geolocation
+                                                            management, with OAuth2 authentication and credential
+                                                            hashing/salting
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project school">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1>SOCIAL CALENDAR</h1>
+                                            <h6 class="pinkText">SCHOOL</h6>
+                                            <h6>PRINCIPLES OF SOFTWARE & REQUIREMENTS /</h6>
+                                            <h6>SOFTWARE DESIGN & ARCHITECTURE</h6>
+                                            <h6>2021</h6>
+                                            <a target="_blank" class="blueText"
+                                               href="https://github.com/madlitch/SOFE3650-Social-Calendar">
+                                                <h6>
+                                                    github.com/madlitch/SOFE3650-Social-Calendar</h6></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Desktop social calendar system that allowed for users to
+                                                            share events with their friends
+                                                        </li>
+                                                        <li>Developed and designed using ADD (Attribute Driven Design)
+                                                            iterations, starting from original use cases, quality
+                                                            attributes, constraints, and concerns
+                                                        </li>
+                                                        <li>Showcases the full ADD process with a comprehensive timeline
+                                                            of architectural design decisions and iterations
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project school">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1>ONTECH MOVIES</h1>
+                                            <h6 class="pinkText">SCHOOL</h6>
+                                            <h6>WEB PROGRAMMING</h6>
+                                            <h6>2020</h6>
+                                            <a target="_blank" class="blueText"
+                                               href="https://github.com/madlitch/ONTech-Movies"><h6>
+                                                github.com/madlitch/ONTech-Movies</h6></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Full-stack movie booking system with a Flask backend and Web
+                                                            (Rendered with Jinja) frontend
+                                                        </li>
+                                                        <li>Fully featured account and invoicing system</li>
+                                                        <li>Can book seats using a visualization of available seats and
+                                                            times
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project school">
+                        <div class="container my-5">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center text-center h-100">
+                                        <div class="text-center">
+                                            <h1>GALTON BOARD SIMULATION</h1>
+                                            <h6 class="pinkText">SCHOOL</h6>
+                                            <h6>DATA STRUCTURES</h6>
+                                            <h6>2020</h6>
+                                            <a target="_blank" class="blueText"
+                                               href="https://github.com/madlitch/galtonboard"><h6>
+                                                github.com/madlitch/galtonboard</h6></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-start">
+                                            <div class="">
+                                                <div class="d-flex align-items-start justify-content-start text-start">
+                                                    <ul>
+                                                        <li>Simulated Galton Board for showcasing a normal distribution
+                                                            when n balls are dropped into m bins through a tree-like
+                                                            pattern of pegs
+                                                        </li>
+                                                        <li>Designed and implemented a recursive algorithm that
+                                                            simulates the path of a ball by traversing a graph
+                                                            representing the network of pegs, stored in a linear array
+                                                        </li>
+                                                        <li>Algorithm resulted in a worst-case time complexity of O(n)
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="hr-gradient"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<footer class="text-center text-lg-start" style="">
+    <div class="text-center p-4">
+        <div class="">
+            &copy; <span><script>document.write(new Date().getFullYear());</script></span> MASSIMO ALBANESE |
+            <a class="copyright-link" target="_blank" href="https://madlitch.cc/">@MADLITCH</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

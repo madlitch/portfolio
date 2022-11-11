@@ -1,0 +1,572 @@
+@font-face {
+    font-family: 'The Neue';
+    src: url("TheNeue-Black.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("Montserrat-Black.woff") format('woff');
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #222222;
+}
+
+* {
+    font-weight: 900 !important;
+}
+
+.display-3 {
+    font-weight: 900;
+}
+
+body {
+    margin: 0;
+    color: white;
+    /*background-image: linear-gradient(90deg, #00C6FF, #FF00F6);*/
+    background-color: #222222;
+    background-size: 100%;
+    /*font-family: "The Neue", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-weight: 700;*/
+    /*animation: gradient 20s ease infinite;*/
+}
+
+.list-group-item {
+    background-color: #333333 !important;
+    color: #00C6FF !important;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+}
+
+.textInput {
+    width: 500px;
+    height: 40px;
+    display: inline-block;
+    background-color: #000000;
+    /*color: #00C6FF;*/
+    color: white;
+    border: none;
+    text-align: center;
+    outline: #00C6FF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.submit-btn {
+    color: white;
+    background-color: #444444;
+    padding: 0;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 35px;
+    -webkit-transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    color: white;
+    background-color: #00C6FF;
+}
+
+.gradient-text {
+    background-image: linear-gradient(90deg, #FF00F6, #00C6FF);
+    background-size: 100%;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.blue {
+    fill: white;
+    color: white;
+    -webkit-transition: color 0.2s, fill 0.2s;
+}
+
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #333333;
+}
+
+.table-dark {
+    --bs-table-striped-bg: #222222;
+    --bs-table-bg: #222222;
+}
+
+.blue:hover {
+    fill: #00C6FF;
+    color: #00C6FF;
+    -webkit-transition: color 0.2s, fill 0.2s;
+}
+
+p {
+    font-size: large;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: "The Neue", sans-serif;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+th {
+    color: #00C6FF;
+}
+
+.th-title {
+    color: white;
+    font-family: "The Neue", sans-serif;
+    font-size: 150%;
+}
+
+#header, #video, #price-box {
+
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+}
+
+#header {
+    /*background-color: #222222;*/
+    /*margin-bottom: 5px;*/
+    /*padding-bottom: 5px;*/
+}
+
+header {
+    padding: 0 5px 5px 5px;
+    position: relative;
+    /*background-image: linear-gradient(90deg, #00C6FF, #FF00F6);*/
+    /*background-color: black;*/
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /*text-shadow: 2px 2px rgba(0, 0, 0, 0.53);*/
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*min-height: 100%;*/
+    /*min-width: 100%;*/
+    background-color: black;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.svg-blue {
+    fill: rgba(255, 255, 255, 0.73);
+    -webkit-transition: fill 0.2s;
+}
+
+.svg-blue:hover {
+    fill: #00C6FF;
+}
+
+.arrow-container {
+    /*max-width: 50px;*/
+    width: auto;
+    fill: rgba(255, 255, 255, 0.73);
+    position: absolute;
+    -webkit-transition: fill 0.2s;
+    z-index: 3;
+    margin: 10px;
+}
+
+.arrow-back {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    margin: 0 20px 15px;
+}
+
+.arrow-bottom {
+    left: 50%;
+    bottom: 0;
+    margin: 0 0 10px;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.arrow {
+    max-height: 50px;
+    max-width: 50px;
+    min-width: 20px;
+}
+
+.feature-svg {
+    max-width: 150px;
+    min-width: 50px;
+    width: auto;
+}
+
+.social {
+    fill: white;
+}
+
+#socials {
+    margin-top: 100px;
+}
+
+a:active {
+    color: #00C6FF;
+}
+
+a:hover {
+    color: #00C6FF;
+    /*fill: #00C6FF;*/
+}
+
+/*a svg {*/
+/*    fill: rgba(255, 255, 255, 0.73);*/
+/*}*/
+
+footer {
+    color: #666666;
+    background-color: #222222;
+}
+
+footer a {
+    color: #666666;
+}
+
+a {
+    color: white;
+    -webkit-transition: color 0.2s, fill 0.2s;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+.hr-gradient, .nav-gradient-bar {
+    background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+}
+
+.nav-gradient-bar {
+    height: 5px;
+}
+
+.hr-gradient {
+    height: 1px;
+}
+
+
+nav .nav-item {
+    background-color: #222222;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transition: background-color 0.2s;
+}
+
+nav .nav-item:hover {
+    /*background-color: #00C6FF;*/
+    /*background-color: #FF00F6;*/
+    background-color: rgba(27, 27, 27, 0);
+    -moz-transition: background-color 0.2s;
+}
+
+nav .dropdown-menu {
+    background-color: #222222;
+}
+
+nav .dropdown-item {
+    color: white;
+    background-color: #222222;
+    -moz-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+nav .dropdown-item:hover {
+    color: white;
+    -moz-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    background-color: #00C6FF;
+}
+
+nav {
+    height: 40px;
+}
+
+li .social {
+    /*margin-top: -2px;*/
+}
+
+nav .divider {
+    width: 1px;
+    background-color: #666666;
+    margin: 5px
+}
+
+.underline-highlight {
+    cursor: pointer;
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+    -webkit-transition: width 0.2s ease;
+}
+
+.tab {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-transition: width 0.5s ease;
+}
+
+.zero-width {
+    width: 0;
+}
+
+
+.transparent-background {
+    background-color: transparent!important;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    max-height: 40px;
+}
+
+.navbar-brand .glitch {
+    margin-right: 2px;
+}
+
+.navbar-toggle {
+    z-index: 1;
+}
+
+.brand-centered2 {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+.brand-centered {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.navbar-brand {
+    max-height: 40px;
+    /*transform: translateX(-50%);*/
+    /*left: 50%;*/
+    /*position: absolute;*/
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    cursor: pointer;
+    font-family: "The Neue";
+    color: rgba(255, 255, 255, 1);
+    /*-webkit-transition: color 0.2s;*/
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.showcase-image {
+    /*max-width: 60%;*/
+}
+
+.avatar {
+    border-radius: 50%;
+    /*max-width: 5vw;*/
+    max-height: 5vh;
+}
+
+#buy-btn {
+    color: white;
+    opacity: 100% !important;
+}
+
+#nav-buy:hover #buy-btn {
+    /*-webkit-text-fill-color: white;*/
+    /*-webkit-transition: color 0.2s;*/
+}
+
+
+#nav-buy {
+    background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+    /*opacity: 0;*/
+}
+
+#nav-buy-button {
+    background-color: #FF00F6;
+    opacity: 100%;
+    height: 100%;
+    padding-right: .2rem;
+    padding-left: .2rem;
+    display: flex;
+    align-items: center;
+    -webkit-transition: background-color 0.2s;
+}
+
+#nav-buy-mobile {
+    background-color: #FF00F6
+}
+
+#nav-buy-mobile:hover {
+    background-color: #00C6FF;
+    -webkit-transition: background-color 0.2s;
+}
+
+#nav-buy-button:hover {
+    background-color: transparent;
+}
+
+.header-buy {
+    background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+    color: white;
+    width: 200px;
+    padding: 0;
+}
+
+.header-buy-btn {
+    background-color: #FF00F6;
+    color: white;
+    opacity: 100%;
+    -webkit-transition: background-color 0.2s;
+}
+
+.header-buy-btn:hover {
+    background-color: transparent;
+}
+
+nav .navbar-brand {
+    padding: 0;
+    font-size: 1.75rem;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.vertical-center {
+    /*min-height: 100%;  !* Fallback for browsers do NOT support vh unit *!*/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.still {
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*  Docs ----------------------- */
+
+#docsContainer {
+    /*position: absolute;*/
+    background-color: #222222;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*overflow: scroll;*/
+}
+
+#docs {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+.docs-hr {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.docs > p {
+    font-family: 'Source Sans Pro', sans-serif;
+    /*font-size: medium;*/
+    margin-bottom: 10px;
+    /*margin-left: 30px;*/
+}
+
+.docs > h6 .docs > p {
+    margin-left: 20px;
+    /*margin-left: 30px;*/
+}
+
+.docs-heading {
+    /*display: inline;*/
+    margin-bottom: 0;
+}
+
+/*.docs-setting {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
+
+.blueText {
+    color: #00C6FF;
+}
+
+.montText {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.redText {
+    color: red;
+}
+
+.pinkText {
+    color: #FF00F6;
+}
+
+#header-title {
+    font-family: "The Neue";
+    /*font-family: "Montserrat";*/
+    font-style: italic;
+}
+
+.zoom-image {
+    transition: transform 0.2s;
+}
+
+.zoom-image:hover {
+    transform: scale(110%);
+}
+
+
