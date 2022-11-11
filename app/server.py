@@ -22,7 +22,15 @@ logging.basicConfig(filename='info.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-app = FastAPI(debug=debug, docs_url=None, redoc_url=None)
+async def not_found(request: Request, exc):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
+exceptions_handler = {
+    404: not_found
+}
+
+app = FastAPI(exception_handlers=exceptions_handler, debug=debug, docs_url=None, redoc_url=None)
 
 
 @app.middleware('http')
@@ -55,10 +63,7 @@ templates = Jinja2Templates(directory="{}templates".format(APP_ROOT))
 
 @app.get("/", response_class=HTMLResponse)
 async def homepage(request: Request):
-    if maintenance == 1:
-        return templates.TemplateResponse("maintenance.html", {"request": request})
-    else:
-        return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get("/resume", response_class=FileResponse)
