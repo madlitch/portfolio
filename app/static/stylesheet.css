@@ -241,18 +241,26 @@ header video {
     margin-top: 100px;
 }
 
-a:active {
-    color: #00C6FF;
-}
 
-a:hover {
-    color: #00C6FF;
-    /*fill: #00C6FF;*/
-}
 
 /*a svg {*/
 /*    fill: rgba(255, 255, 255, 0.73);*/
 /*}*/
+
+.tag {
+    display: inline-block;
+    color: #FF00F6;
+    cursor: pointer;
+    -webkit-transition: color 0.2s, fill 0.2s;
+}
+
+.tag:hover {
+    color: #00C6FF;
+}
+
+div>.tag {
+
+}
 
 footer {
     color: #666666;
@@ -264,8 +272,17 @@ footer a {
 }
 
 a {
-    color: white;
+    color: #00C6FF;
     -webkit-transition: color 0.2s, fill 0.2s;
+}
+a:active {
+    color: #FF00F6;
+    /*color: #00C6FF;*/
+}
+
+a:hover {
+    color: #FF00F6;
+    /*fill: #00C6FF;*/
 }
 
 a, u {
