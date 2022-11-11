@@ -22,17 +22,7 @@ logging.basicConfig(filename='info.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-async def not_found(request: Request, exc):
-    if maintenance == 1:
-        return templates.TemplateResponse("maintenance.html", {"request": request})
-    else:
-        return templates.TemplateResponse("404.html", {"request": request, "status": exc.status_code})
-
-exceptions_handler = {
-    404: not_found
-}
-
-app = FastAPI(exception_handlers=exceptions_handler, debug=debug, docs_url=None, redoc_url=None)
+app = FastAPI(debug=debug, docs_url=None, redoc_url=None)
 
 
 @app.middleware('http')
