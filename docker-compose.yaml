@@ -6,9 +6,9 @@ services:
     env_file:
       - .env
     environment:
-      - PORT=8080
+      - PORT=8081
     ports:
-    - "8080:80"
+    - "8081:80"
     volumes:
       - "./app:/app"
 
