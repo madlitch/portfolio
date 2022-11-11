@@ -32,9 +32,12 @@
                 <li id="nav-projects" class="nav-item text-center " onclick="switch_tab('projects')">
                     <span class="nav-link">PROJECTS</span>
                 </li>
-                <li class="nav-item text-center">
-                    <a href="/resume" target="_blank" class="nav-link">RESUME</a>
+                <li id="nav-resume" class="nav-item text-center " onclick="switch_tab('resume')">
+                    <span class="nav-link">RESUME</span>
                 </li>
+<!--                <li class="nav-item text-center">-->
+<!--                    <a href="/resume" target="_blank" class="nav-link">RESUME</a>-->
+<!--                </li>-->
             </ul>
             <div class="bg-dark d-block" style="width: 100%; height: 40px"></div>
             <ul class="navbar-nav ms-auto">
@@ -76,13 +79,13 @@
                     <div class="my-3"></div>
                     <h6><span class="pinkText">Currently: </span>looking for an internship for Summer 2023.</h6>
                     <h6>Get in touch via email: <a
-                                                   href="mailto:massimo@albane.se">massimo@albane.se</a>
+                            href="mailto:massimo@albane.se">massimo@albane.se</a>
                     </h6>
                 </div>
             </div>
         </div>
         <div id="projects" class="tab bg-dark text-center h-100 d-inline-block"
-             style="background-color: #222222; padding-top: 2vh; width: 0;">
+             style="padding-top: 2vh; width: 0;">
             <div style="width: 100vw; height: 100%; overflow: hidden">
                 <div class="container mt-5" style="height: 3%">
                     <div class="row">
@@ -507,6 +510,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="resume" class="tab bg-dark text-center h-100 d-inline-block" style="padding-top: 40px; width: 0;">
+            <div style="width: 100vw; height: 100%; overflow: hidden">
+                <iframe class="w-100 h-100" src="/static/assets/massimo_albanese_resume.pdf" frameborder="0"></iframe>
             </div>
         </div>
     </div>

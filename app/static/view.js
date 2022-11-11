@@ -1,16 +1,22 @@
 const src = "/static/images/";
 
 async function switch_tab(tab) {
+    document.getElementById('about').style.width = '0';
+    document.getElementById('projects').style.width = '0';
+    document.getElementById('resume').style.width = '0';
+    document.getElementById('nav-about').classList.remove('transparent-background');
+    document.getElementById('nav-projects').classList.remove('transparent-background');
+    document.getElementById('nav-resume').classList.remove('transparent-background');
+
     if (tab === 'about') {
         document.getElementById('about').style.width = '100%';
-        document.getElementById('projects').style.width = '0';
         document.getElementById('nav-about').classList.add('transparent-background');
-        document.getElementById('nav-projects').classList.remove('transparent-background');
-    } else {
-        document.getElementById('about').style.width = '0';
+    } else if (tab === 'projects') {
         document.getElementById('projects').style.width = '100%';
-        document.getElementById('nav-about').classList.remove('transparent-background');
         document.getElementById('nav-projects').classList.add('transparent-background');
+    } else if (tab === 'resume') {
+        document.getElementById('resume').style.width = '100%';
+        document.getElementById('nav-resume').classList.add('transparent-background');
     }
 }
 
