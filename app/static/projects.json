@@ -10,7 +10,7 @@
       "Engineered and orchestrated the design and assembly of a smart medicine cabinet to enhance medication management for patients with dementia",
       "Designed and 3D printed medication dispensers with solenoid actuation, addressing mechanical challenges to reliably dispense medication",
       "Implemented computer vision algorithms using Python and OpenCV for medication intake verification, ensuring accurate tracking of patient consumption",
-      "Developed the backend server architecture for the smart medicine cabinet using Node.js and Express, focusing on robustness and API service efficiency",
+      "Developed the backend server architecture using Node.js and Express, focusing on robustness and API service efficiency",
       "Integrated Sequelize ORM for database operations, facilitating secure and efficient data management, including patient profiles and medication schedules",
       "Oversaw the design, assembly, and wiring of the cabinet, optimizing for space and functionality while maintaining aesthetic appeal"
     ]

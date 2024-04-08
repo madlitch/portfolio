@@ -204,7 +204,7 @@ nav .nav-item:hover {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    -webkit-transition: width 0.5s ease, height 0.5s ease;
+    -webkit-transition: width 0.5s ease-in-out, height 0.5s ease;
 }
 
 .zero-width {
@@ -321,14 +321,12 @@ nav .navbar-brand {
 
 .filter-container {
     position: sticky;
-    top: 0; /* Adjust this value as needed */
-    z-index: 1000; /* Ensures the filter bar stays on top of other content */
-    padding: 1rem 0 0 0;
-    /*background-color: #000; !* or any other background to match your design *!*/
+    top: 0;
+    z-index: 1000;
 }
 
 .project-list-container {
-    max-height: calc(100vh - 3rem - 40px); /* Adjust based on the height of your filter container */
+    max-height: calc(100vh - 3rem - 45px);
     overflow-y: auto;
 }
 
