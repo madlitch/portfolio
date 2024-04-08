@@ -1,3 +1,5 @@
+import json
+
 from fastapi import FastAPI, Request, BackgroundTasks, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -47,6 +49,10 @@ async def log_requests(request: Request, call_next):
 
 @app.on_event("startup")
 async def startup():
+    global projects
+    filename = "static/projects.json"
+    with open(filename, "r") as f:
+        projects = json.load(f)
     # await database.connect()
     return
 
@@ -61,17 +67,21 @@ app.mount("/static", StaticFiles(directory="{}static".format(APP_ROOT)), name="s
 templates = Jinja2Templates(directory="{}templates".format(APP_ROOT))
 
 
-@app.get("/", response_class=HTMLResponse)
-async def homepage(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
-
-
+# @app.get("/", response_class=HTMLResponse)
+# async def homepage(request: Request):
+#     return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
 @app.get("/resume", response_class=FileResponse)
 async def resume(request: Request):
     return FileResponse("static/assets/massimo_albanese_resume.pdf")
 
 
+@app.get("/{full_path:path}", response_class=HTMLResponse)
+async def catch_all(request: Request, full_path: str):
+    return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
 
 
 
 
+# @app.get("/{path}", response_class=HTMLResponse)
+# async def homepage(request: Request, path: str):
+#     return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
