@@ -11,19 +11,19 @@
       "Designed and 3D printed medication dispensers with solenoid actuation, addressing mechanical challenges to reliably dispense medication",
       "Implemented computer vision algorithms using Python and OpenCV for medication intake verification, ensuring accurate tracking of patient consumption",
       "Developed the backend server architecture using Node.js and Express, focusing on robustness and API service efficiency",
-      "Integrated Sequelize ORM for database operations, facilitating secure and efficient data management, including patient profiles and medication schedules",
+      "Integrated Sequelize ORM for database operations, facilitating secure and efficient data management",
       "Oversaw the design, assembly, and wiring of the cabinet, optimizing for space and functionality while maintaining aesthetic appeal"
     ]
   },
   {
-    "title": "ACC Cloud Simulation",
+    "title": "Cloud ACC Simulation",
     "tags": ["school"],
     "subtitle": "Cloud Computing",
     "year": "2024",
     "url": "https://github.com/madlitch/acc_cloud_simulation",
     "keywords": "Google Cloud Platform, Dataflow, Apache Beam, BigQuery, Numpy, Pandas",
     "bulletpoints": [
-      "Developed an end-to-end pipeline for simulating Adaptive Cruise Control (ACC) using the HighD dataset, leveraging Google Cloud Storage (GCS), Google Dataflow, and Google Compute Engine (GCE) for data processing and simulation execution",
+      "Developed an end-to-end pipeline for simulating Adaptive Cruise Control (ACC) using the LXD HighD dataset, leveraging Google Cloud Storage (GCS), Google Dataflow, and Google Compute Engine (GCE) for data processing and simulation execution",
       "Implemented data processing and filtering mechanisms with Google Dataflow to identify challenging scenarios for ACC simulation, storing processed data in BigQuery for further analysis",
       "Designed and deployed a Pub/Sub messaging system to asynchronously trigger ACC behavior simulations on GCE instances, based on real-world driving scenarios",
       "Executed ACC simulations on GCE, incorporating custom Python scripts to evaluate ACC performance against challenging scenarios, with simulation outcomes persisted in BigQuery",
@@ -62,18 +62,35 @@
     ]
   },
   {
+    "title": "Distributed Jeopardy",
+    "tags": ["school"],
+    "subtitle": "Distributed Systems",
+    "year": "2023",
+    "url": "https://github.com/madlitch/distributed_jeopardy",
+    "keywords": "Java, Concurrency, Socket Programming, Multithreading, Server-Client Architecture, CyclicBarrier",
+    "bulletpoints": [
+      "Implemented a multi-threaded Jeopardy game server in Java using socket programming",
+      "Leveraged Java concurrency tools like CyclicBarrier and synchronized methods for seamless game state management across player interactions",
+      "Developed a custom communication protocol between client and server to support robust and scalable game interactions",
+      "Created a dynamic content management system for storing and accessing game questions, answers, and scores",
+      "Utilized player response times to ensure fair play and determine turn order, enhancing the competitiveness of the game",
+      "Incorporated comprehensive error handling and connection management to maintain game integrity during disruptions"
+    ]
+  },
+  {
     "title": "CalorieCalculator",
     "tags": ["school"],
     "subtitle": "Mobile Application Development",
     "year": "2023",
     "url": "https://github.com/madlitch/CalorieCalculator",
-    "keywords": "Flutter, Dart",
+    "keywords": "Flutter, Dart, SQLite",
     "bulletpoints": [
-      "A decentralized social networking platform, inspired by Mastodon, utilizing FastAPI, PostgreSQL, and Docker",
-      "Designed and implemented a publish-subscribe server-to-server communication protocol, enabling real-time data propagation and synchronization across decentralized server instances",
-      "Scalable backend infrastructure leveraging Docker and Docker Compose for containerization and orchestration",
-      "Single Version of Truth data consistency model, achieving immutable data across the network for clear data lineage",
-      "RESTful API endpoints for a React Native application"
+      "Designed and implemented a Nutrition Tracker mobile app using Flutter and Dart, emphasizing usability and performance",
+      "Developed a local SQLite database integration for persistent storage of food items and nutritional information, enhancing app functionality",
+      "Crafted custom UI components for food listing and nutrition details, providing a seamless and intuitive user experience",
+      "Implemented complex business logic for tracking daily food intake, calculating nutritional values, and generating user insights",
+      "Utilized state management practices to ensure a responsive and dynamic user interface across the application",
+      "Incorporated best practices in code organization and architecture, facilitating easy maintenance and future app scalability"
     ]
   },
   {
@@ -97,7 +114,7 @@
     "subtitle": "Commercial Application",
     "year": "2021-2022",
     "url": "https://madpixel.software/madpixelsort",
-    "keywords": "Rust, JavaScript, HTML, CSS, Electron, Ffmpeg, Neon Bindings, Bootstrap, JQuery",
+    "keywords": "Rust, JavaScript, HTML, CSS, Electron, FFMpeg, Neon Bindings, Bootstrap, JQuery",
     "bulletpoints": [
       "Cross-platform desktop app for producing pixel sorting effects using Electron and Neon Bindings",
       "Single-handedly conceptualized, built, and brought to market with commercial success",

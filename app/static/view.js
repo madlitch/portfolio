@@ -3,19 +3,15 @@ const src = "/static/images/";
 function checkPathAndSwitchTab() {
     const path = window.location.pathname;
     const tab = path.split('/')[1]; // Assuming URL structure is like site.com/tabName
-    switchTab(tab);
+    selectTab(tab);
 }
 
 function switchTab(tab) {
     if (tab === "") {
         tab = "home";
     }
-    const tabs = document.querySelectorAll('.tab');
     const navtabs = document.querySelectorAll('.nav-tab');
 
-    tabs.forEach((tab) => {
-        tab.style.height = '0';
-    });
     navtabs.forEach((navtab) => {
         navtab.classList.remove('transparent-background');
     });
@@ -24,8 +20,14 @@ function switchTab(tab) {
         history.pushState({tab: tab}, '', '/' + tab);
     }
 
-    document.getElementById(tab).style.height = '100%';
     document.getElementById('nav-' + tab).classList.add('transparent-background');
+}
+
+function selectTab(tab) {
+    if (tab === "") {
+        tab = "home";
+    }
+    document.getElementById(tab).scrollIntoView({behavior: "smooth", block: "start"});
 }
 
 window.onpopstate = function (event) {
@@ -65,13 +67,39 @@ async function switchProjects(tag, button) {
 
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    function intersectionCallback(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(`Center of ${entry.target.parentNode.id} is in the viewport's middle`);
+            }
+        });
+    }
+
+    const viewportHeight = window.innerHeight;
+    const halfViewportHeight = Math.round(viewportHeight / 2);
+    const rootMarginValue = `-${halfViewportHeight}px 0px`;
+
+    const options = {
+        root: null,
+        rootMargin: `${rootMarginValue} 0px 0px`, // Adjusted dynamically
+        threshold: 0.01 // Detect even minor intersections
+    };
+    const observer = new IntersectionObserver(intersectionCallback, options);
+
+    document.querySelectorAll('.tab .sentinel').forEach(sentinel => {
+        observer.observe(sentinel);
+    });
+});
+
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function start() {
-    document.querySelectorAll('.nav-item').forEach(function(element) {
-        element.addEventListener('click', function(e) {
+    document.querySelectorAll('.nav-item').forEach(function (element) {
+        element.addEventListener('click', function (e) {
             const navbarToggler = document.getElementById('navbar-toggler');
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 if (document.querySelector('.navbar-collapse').classList.contains('show')) {

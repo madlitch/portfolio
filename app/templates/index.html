@@ -12,7 +12,7 @@
     <meta name="description" content="Software engineer, entrepreneur, digital artist">
     <link rel="stylesheet" href="/static/stylesheet.css">
 </head>
-<body onload="checkPathAndSwitchTab(); switchProjects('highlight'); start()">
+<body onload="checkPathAndSwitchTab(); switchProjects('highlight'); start();">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-auto fixed-top" style="display: block; ">
     <div class="container mx-auto"
          style=" padding: 0; background-image: linear-gradient(90deg, #00C6FF, #FF00F6); background-size: 100vw; background-position: center">
@@ -20,7 +20,7 @@
             <span style="font-size: 25px;  font-weight: bold; text-transform: uppercase; font-family: 'The Neue'">Massimo Albanese</span>
         </a>
         <div class="bg-dark d-block d-lg-none position-absolute z-0"
-             style="width: 100vh; top: 0; left: 0; height: 40px"></div>
+             style="width: 100vw; top: 0; left: 0; height: 40px"></div>
         <a href="/" class="d-flex d-lg-none navbar-brand glitch-container z-1" style="padding-left: 8px">
             <span style="font-weight: bold; text-transform: uppercase; font-family: 'The Neue'">Massimo Albanese</span>
         </a>
@@ -31,16 +31,16 @@
         </button>
         <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li id="nav-home" class="transparent-background nav-item nav-tab text-center " onclick="switchTab('')">
+                <li id="nav-home" class="transparent-background nav-item nav-tab text-center " onclick="selectTab('')">
                     <span class="nav-link">HOME</span>
                 </li>
-                <li id="nav-about" class="nav-item nav-tab text-center " onclick="switchTab('about')">
+                <li id="nav-about" class="nav-item nav-tab text-center " onclick="selectTab('about')">
                     <span class="nav-link">ABOUT</span>
                 </li>
-                <li id="nav-projects" class="nav-item nav-tab text-center " onclick="switchTab('projects')">
+                <li id="nav-projects" class="nav-item nav-tab text-center " onclick="selectTab('projects')">
                     <span class="nav-link">PROJECTS</span>
                 </li>
-<!--                <li id="nav-experience" class="nav-item nav-tab text-center " onclick="switchTab('projects')">-->
+<!--                <li id="nav-experience" class="nav-item nav-tab text-center " onclick="selectTab('projects')">-->
 <!--                    <span class="nav-link">EXPERIENCE</span>-->
 <!--                </li>-->
             </ul>
@@ -77,9 +77,9 @@
     </div>
     <div class="nav-gradient-bar"></div>
 </nav>
-<header style="background-image: linear-gradient(90deg, #00C6FF, #FF00F6); top: 40px">
-    <div class="bg-dark text-center h-100 align-middle" style="overflow: hidden">
-        <div id="home" class="tab row g-0 w-100" style="overflow: hidden">
+<div class="header scroll-snap-container">
+    <div class="bg-dark text-center">
+        <div id="home" class="tab row g-0 w-100">
             <div class="row g-0 text-center align-items-center" style="min-height: calc(100vh - 45px)">
                 <div>
                     <div class="mb-2 index-title d-none d-lg-block" style="">
@@ -103,14 +103,15 @@
                             Software</a>.
                     </h6>
                     <div class="my-3"></div>
-                    <h6 class="fw-900 grey">Get in touch via email: <a
-                            href="mailto:massimo@albane.se">massimo@albane.se</a>
+                    <h6 class="fw-900 grey">Get in touch via <a
+                            href="mailto:massimo@albane.se">email</a>.
                     </h6>
                 </div>
             </div>
+            <div class="sentinel"></div>
         </div>
-        <div id="about" class="tab bg-dark text-center w-100 d-inline-block overflow-hidden">
-            <div class="project-list-container align-content-center justify-content-center" style="min-height: calc(100vh - 45px)">
+        <div id="about" class="tab row g-0 w-100">
+            <div class="list-container align-content-center justify-content-center" >
                 <div class="container my-5">
                     <div class="row text-center">
                         <div class="col w-100">
@@ -124,6 +125,7 @@
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900 ">B.Eng. Software Engineering</h5>
+                                    <p class="m-0 fw-600 grey text-nowrap">Internet of Things Specialization</p>
                                     <p class="m-0 fw-600 grey text-nowrap">Ontario Tech University, 2018-2024</p>
                                 </div>
                             </div>
@@ -139,24 +141,33 @@
                 </div>
                 <div class="container my-5">
                     <div class="row text-center">
-                        <div class="col w-100">
+                        <div class="col-md w-100">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-start w-100">
                                     <h2 class="mb-0 text-nowrap cutout-text">Awards</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md">
                             <div class="d-flex align-items-center justify-content-center">
-                                <div class="text-end w-100 my-2 text-nowrap">
+                                <div class="text-end w-100 my-2">
+                                    <h5 class="m-0 lh-1 fw-900 ">Engineering Capstone Design Competition</h5>
+                                    <p class="m-0 fw-600 grey">1st place in Electrical, Computer, and Software Engineering</p>
+                                    <p class="m-0 fw-600 grey">Ontario Tech University</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900 ">President's Honours List</h5>
                                     <p class="m-0 fw-600 grey">Winter 2020, Fall 2023</p>
+                                    <p class="m-0 fw-600 grey">Ontario Tech University</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900">Dean's Honours List</h5>
                                     <p class="m-0 fw-600 grey">Fall 2021, Fall 2022</p>
+                                    <p class="m-0 fw-600 grey">Ontario Tech University</p>
                                 </div>
                             </div>
                         </div>
@@ -171,30 +182,30 @@
                 </div>
                 <div class="container my-5">
                     <div class="row text-center">
-                        <div class="col">
+                        <div class="col-md">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-start w-100">
                                     <h2 class="mb-0 text-nowrap cutout-text">Technical Skills</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md">
                             <div class="d-flex align-items-center justify-content-center">
-                                <div class="row text-end w-100 my-2">
+                                <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900">Programming Languages</h5>
-                                    <p class="m-0 fw-600 grey">Python, Rust, Java, Dart, JavaScript, HTML, CSS, C++, SQL</p>
+                                    <p class="m-0 fw-600 grey">Python, Rust, Java, Dart, JavaScript, HTML, CSS, SQL, C, C++</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <div class="row text-end w-100 my-2">
+                                <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900">Frameworks & Libraries</h5>
                                     <p class="m-0 fw-600 grey">FastAPI, Flask, Node.js, Electron, Bootstrap, Flutter</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <div class="row text-end w-100 my-2">
+                                <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900">Tools & Technologies</h5>
-                                    <p class="m-0 fw-600 grey">Git, IntelliJ Suite, Docker, SQLAlchemy, Sequelize, OnShape, Solidworks, AutoCAD, FDM Printing, GCP, AWS, ChatGPT, FFMpeg, Photoshop, Raspberry Pi, Arduino</p>
+                                    <p class="m-0 fw-600 grey">Git, IntelliJ Suite, Docker, PostgreSQL, MySQL, SQLite, SQLAlchemy, Sequelize, OnShape, Solidworks, AutoCAD, FDM Printing, GCP, AWS, ChatGPT, FFMpeg, Photoshop, Raspberry Pi, Arduino</p>
                                 </div>
                             </div>
                         </div>
@@ -209,14 +220,14 @@
                 </div>
                 <div class="container my-5">
                     <div class="row text-center">
-                        <div class="col w-100">
+                        <div class="col-md w-100">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-start w-100">
                                     <h2 class="mb-0 text-nowrap cutout-text">Other Skills</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md">
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-end w-100 my-2">
                                     <h5 class="m-0 lh-1 fw-900 ">Languages</h5>
@@ -226,113 +237,107 @@
                         </div>
                     </div>
                 </div>
-                <div class="container my-5">
-                    <div class="">
-                        <div class="">
-                            <hr>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div class="sentinel"></div>
         </div>
-        <div id="projects" class="tab bg-dark text-center w-100 d-inline-block overflow-hidden">
-            <div class="filter-container bg-dark">
-                <div class="d-flex align-items-center align-text-bottom justify-content-center">
-                    <div class="text-center bg-dark">
-                        <div class="d-inline-block mx-4 filter-button"
-                             onclick="switchProjects('all')">
-                            <h5 class="m-0 p-0 bg-dark" style="line-height: 1">ALL</h5>
-                            <div class="underline-highlight all"></div>
-                        </div>
-                        <div class="d-inline-block mx-4 filter-button"
-                             onclick="switchProjects('highlight')">
-                            <h5 class="m-0 p-0 bg-dark" style="line-height: 1">HIGHLIGHTS</h5>
-                            <div class="underline-highlight zero-width highlight"></div>
-                        </div>
-                        <div class="d-inline-block mx-4 filter-button"
-                             onclick="switchProjects('current')">
-                            <h5 class="m-0 p-0 bg-dark" style="line-height: 1">CURRENT</h5>
-                            <div class="underline-highlight zero-width current"></div>
-                        </div>
-                        <div class="d-inline-block mx-4 filter-button"
-                             onclick="switchProjects('school')">
-                            <h5 class="m-0 p-0 bg-dark" style="line-height: 1">SCHOOL</h5>
-                            <div class="underline-highlight zero-width school"></div>
-                        </div>
-                        <div class="d-inline-block mx-4 filter-button"
-                             onclick="switchProjects('startup')">
-                            <h5 class="m-0 p-0 bg-dark" style="line-height: 1">STARTUP</h5>
-                            <div class="underline-highlight zero-width startup"></div>
-                        </div>
+        <div class="filter-container bg-dark">
+            <div class="d-flex align-items-center align-text-bottom justify-content-center">
+                <div class="text-center bg-dark lh-1" style="scale: 0.8">
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchProjects('all')">
+                        <h5 class="m-0 p-0 bg-dark">ALL</h5>
+                        <div class="underline-highlight all"></div>
+                    </div>
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchProjects('highlight')">
+                        <h5 class="m-0 p-0 bg-dark">HIGHLIGHTS</h5>
+                        <div class="underline-highlight zero-width highlight"></div>
+                    </div>
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchProjects('current')">
+                        <h5 class="m-0 p-0 bg-dark">CURRENT</h5>
+                        <div class="underline-highlight zero-width current"></div>
+                    </div>
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchProjects('school')">
+                        <h5 class="m-0 p-0 bg-dark">SCHOOL</h5>
+                        <div class="underline-highlight zero-width school"></div>
+                    </div>
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchProjects('startup')">
+                        <h5 class="m-0 p-0 bg-dark">STARTUP</h5>
+                        <div class="underline-highlight zero-width startup"></div>
                     </div>
                 </div>
-                <hr>
             </div>
-            <div class="project-list-container">
-                <div class="">
-                    {% for project in projects %}
-                    <div class="project {{ project.tags | join(' ') }}">
-                        <div class="container my-5">
-                            <div class="row text-center">
-                                <div class="col w-100">
-                                    <div class="d-flex align-items-center justify-content-center h-100">
-                                        <div class="text-start w-100">
-                                            <h2 class="mb-0 text-nowrap cutout-text">{{ project.title }}</h2>
-                                            <div class="fw-900">
-                                                <h6 class="fw-900">{{ project.subtitle }}, {{ project.year }}</h6>
-                                                <div>
-                                                    {% for tag in project.tags %}
-                                                    <h6 class="tag fw-900" onclick="switchProjects('{{ tag }}', this)">
-                                                        #{{ tag }}</h6>
-                                                    {% endfor %}
-                                                </div>
-                                                <div class="">
-                                                    <p class="technologies fw-900 grey">{{ project.keywords }}</p>
-                                                </div>
-                                                {% if project.url != "" %}
-                                                <div class="mb-4">
-                                                    <a target="_blank" href="{{ project.url }}">
-                                                        <svg class="icon svg-blue" viewBox="0 0 24 24">
-                                                            <use xlink:href="#link-svg"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                {% endif %}
+            <hr class="m-0">
+        </div>
+        <div id="projects" class="tab bg-dark text-center w-100 d-inline-block">
+            <div class="list-container" style="min-height: calc(100vh - 45px)">
+                {% for project in projects %}
+                <div class="project {{ project.tags | join(' ') }}">
+                    <div class="container my-5">
+                        <div class="row text-center">
+                            <div class="col-md w-100">
+                                <div class="d-flex align-items-center justify-content-center h-100">
+                                    <div class="text-start w-100">
+                                        <h2 class="mb-0 cutout-text">{{ project.title }}</h2>
+                                        <div class="fw-900">
+                                            <h6 class="fw-900">{{ project.subtitle }}, {{ project.year }}</h6>
+                                            <div>
+                                                {% for tag in project.tags %}
+                                                <h6 class="tag fw-900" onclick="switchProjects('{{ tag }}', this)">
+                                                    #{{ tag }}</h6>
+                                                {% endfor %}
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col w-100">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <div class="text-end w-100">
                                             <div class="">
-                                                <div class="d-flex align-items-start justify-content-start text-start fw-600">
-                                                    <ul>
-                                                        {% for point in project.bulletpoints %}
-                                                        <li>{{ point }}</li>
-                                                        {% endfor %}
-                                                    </ul>
-                                                </div>
+                                                <p class="technologies fw-900 grey">{{ project.keywords }}</p>
+                                            </div>
+                                            {% if project.url != "" %}
+                                            <div class="mb-4">
+                                                <a target="_blank" href="{{ project.url }}">
+                                                    <svg class="icon svg-blue" viewBox="0 0 24 24">
+                                                        <use xlink:href="#link-svg"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md w-100">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="text-end w-100">
+                                        <div class="">
+                                            <div class="d-flex align-items-start justify-content-start text-start fw-600 ">
+                                                <ul>
+                                                    {% for point in project.bulletpoints %}
+                                                    <li class="my-1"  style="font-size: 0.9em">{{ point }}</li>
+                                                    {% endfor %}
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="container my-5">
+                    </div>
+                    <div class="container my-5">
+                        <div class="">
                             <div class="">
-                                <div class="">
-                                    <hr>
-                                </div>
+                                <hr>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
+            <div class="sentinel"></div>
         </div>
     </div>
-</header>
+</div>
+<div class="bottom-gradient-line"></div>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="display: none" aria-hidden="true">
     <symbol id="link-svg" viewBox="0 0 24 24">
         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/>
