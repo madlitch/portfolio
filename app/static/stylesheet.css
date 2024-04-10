@@ -38,22 +38,16 @@ nav {
     color: #f1f1f1;
 }
 
+.nav-gradient-bar {
+    height: 5px;
+}
+
+#navbar-toggler {
+    border: 0;
+}
+
 .bg-dark {
     background-color: #222222 !important;
-}
-
-.overlay {
-    width: 100%;
-    height: 40px; /* Default height for mobile */
-    /*background-color: #000; !* or any dark color you want *!*/
-}
-
-/* This media query applies for screens larger than 992px in width */
-@media (min-width: 992px) {
-    .overlay {
-        height: auto; /* Allows the div to expand fully on larger screens */
-        /* any other styles you want to apply only on larger screens */
-    }
 }
 
 .gradient-text {
@@ -119,14 +113,75 @@ header .container {
     z-index: 2;
 }
 
+@media (min-width: 577px) {
+    .scroll-snap-container {
+        scroll-padding-top: 45px;
+        overflow-y: scroll;
+        /*scroll-snap-type: y proximity;*/
+        height: calc(100vh);;
+    }
+
+    .filter-container {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header {
+        padding: 45px 5px 0px 5px;
+        width: 100%;
+        background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+    }
+
+    .bottom-gradient-line {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 577px) {
+    .filter-container {
+        position: sticky;
+        top: 42px;
+        z-index: 1000;
+    }
+
+    .header {
+        padding: 45px 2px 0px 2px;
+        width: 100%;
+        background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+    }
+
+    .bottom-gradient-line {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
+        z-index: 1000;
+    }
+}
+
+.scroll-snap {
+    scroll-snap-align: start;
+}
+
 header {
-    padding: 0 5px 5px 5px;
+    padding: 45px 5px 0px 5px;
     position: relative;
     /*height: 100vh;*/
-    height: calc(100vh - 40px); /* Adjust based on the height of your filter container */
+    /*height: calc(100vh - 45px); */
     width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+    /*overflow: hidden;*/
+    /*object-fit: cover;*/
+    /*top: 45px;*/
+    background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
 }
 
 .tag {
@@ -172,10 +227,6 @@ a, u {
     background-image: linear-gradient(90deg, #00C6FF, #FF00F6);
 }
 
-.nav-gradient-bar {
-    height: 5px;
-}
-
 .hr-gradient {
     height: 1px;
 }
@@ -202,8 +253,8 @@ nav .nav-item:hover {
 
 .tab {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+    position: relative;
+    min-height: calc(100vh - 45px);
     -webkit-transition: width 0.5s ease-in-out, height 0.5s ease;
 }
 
@@ -245,9 +296,6 @@ nav .navbar-brand {
     font-size: 1rem;
     color: #00C6FF;
 }
-
-/* Existing CSS styles omitted for brevity */
-/* Add your existing styles here, followed by the new styles below */
 
 .navbar-container {
     padding: 0;
@@ -319,17 +367,10 @@ nav .navbar-brand {
     font-weight: 900;
 }
 
-.filter-container {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.list-container {
+    min-height: calc(100vh - 50px);
+    /*overflow-y: scroll;*/
 }
-
-.project-list-container {
-    max-height: calc(100vh - 3rem - 45px);
-    overflow-y: auto;
-}
-
 
 .filter-button {
     cursor: pointer;
@@ -337,7 +378,6 @@ nav .navbar-brand {
 }
 
 .cutout-text {
-    /*font-weight: bold;*/
     color: transparent;
     background: linear-gradient(90deg, #00C6FF, #FF00F6);
     -webkit-background-clip: text;
@@ -346,4 +386,18 @@ nav .navbar-brand {
 
 .grey {
     color: #a5a5a5;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sentinel {
+    position: absolute;
+    top: 50%; /* Center vertically in the tab */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Minimal height */
+    pointer-events: none; /* Prevents the sentinel from interfering with mouse events */
 }
