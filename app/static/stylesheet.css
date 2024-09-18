@@ -8,10 +8,15 @@
     src: url("Montserrat-Black.woff") format('woff');
 }
 
+:root {
+    font-variant-ligatures: none;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    background-color: #222222;
+    /*background-color: #222222;*/
+    background-image: linear-gradient(90deg, #FF00F6, #00C6FF);
 }
 
 .fw-900 {
@@ -28,8 +33,11 @@ html {
 
 body {
     margin: 0;
-    color: #f1f1f1;
-    background-color: #222222;
+    /*color: #f1f1f1;*/
+    color: #222222;
+    /*background-color: #222222;*/
+    /*background-color: #fffdfd;*/
+    background-image: linear-gradient(90deg, #FF00F6, #00C6FF);
     background-size: 100%;
     font-family: "Montserrat", sans-serif;
 }
@@ -47,7 +55,7 @@ nav {
 }
 
 .bg-dark {
-    background-color: #222222 !important;
+    background-color: #fffdfd !important;
 }
 
 .gradient-text {
@@ -232,15 +240,16 @@ a, u {
 }
 
 nav .nav-item {
-    background-color: #222222;
+    background-color: #fffdfd;
     margin-top: 0;
     margin-bottom: 0;
     -webkit-transition: background-color 0.2s;
+    color: #222222;
 }
 
 nav .nav-item:hover {
     background-color: rgba(27, 27, 27, 0);
-    -moz-transition: background-color 0.2s;
+    color: #fffdfd!important;
 }
 
 .underline-highlight {
@@ -264,6 +273,7 @@ nav .nav-item:hover {
 
 .transparent-background {
     background-color: transparent!important;
+    color: #fffdfd!important;
 }
 
 .brand-centered {
@@ -274,13 +284,16 @@ nav .nav-item:hover {
 
 .navbar-brand {
     max-height: 40px;
+    color: #222222;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     cursor: pointer;
     font-family: "The Neue";
     scale: 0.9;
-    color: #f1f1f1;
+    text-transform: lowercase;
+    /*color: #f1f1f1;*/
+    color: unset;
 }
 
 nav .navbar-brand {
@@ -307,7 +320,7 @@ nav .navbar-brand {
 .navbar-title {
     font-size: 25px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-family: 'The Neue';
 }
 
@@ -368,7 +381,6 @@ nav .navbar-brand {
 }
 
 .list-container {
-    min-height: calc(100vh - 50px);
     /*overflow-y: scroll;*/
 }
 
@@ -385,7 +397,7 @@ nav .navbar-brand {
 }
 
 .grey {
-    color: #a5a5a5;
+    color: #696969;
 }
 
 .text-justify {
@@ -395,9 +407,9 @@ nav .navbar-brand {
 
 .sentinel {
     position: absolute;
-    top: 50%; /* Center vertically in the tab */
+    top: 50vh;
     left: 0;
     width: 100%;
-    height: 1px; /* Minimal height */
-    pointer-events: none; /* Prevents the sentinel from interfering with mouse events */
+    height: 1px;
+    pointer-events: none;
 }
