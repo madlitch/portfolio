@@ -17,7 +17,7 @@
   },
   {
     "title": "Cloud ACC Simulation",
-    "tags": ["school"],
+    "tags": ["highlight", "school"],
     "subtitle": "Cloud Computing",
     "year": "2024",
     "url": "https://github.com/madlitch/acc_cloud_simulation",
@@ -63,7 +63,7 @@
   },
   {
     "title": "Distributed Jeopardy",
-    "tags": ["school"],
+    "tags": ["highlight", "school"],
     "subtitle": "Distributed Systems",
     "year": "2023",
     "url": "https://github.com/madlitch/distributed_jeopardy",
