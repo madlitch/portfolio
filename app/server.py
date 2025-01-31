@@ -50,7 +50,7 @@ async def log_requests(request: Request, call_next):
 @app.on_event("startup")
 async def startup():
     global projects
-    filename = "static/projects.json"
+    filename = "static/work.json"
     with open(filename, "r") as f:
         projects = json.load(f)
     # await database.connect()

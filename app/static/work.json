@@ -1,12 +1,28 @@
 [
   {
+    "title": "Full Stack SWE",
+    "tags": ["current", "professional"],
+    "subtitle": "Spectra BM",
+    "year": "2024 - Current",
+    "url": "https://www.spectra.bm/",
+    "keywords": "React, Next.js, Ant Design, Jest, PostgreSQL, Prisma ORM, Microsoft Azure",
+    "bulletpoints": [
+      "Developed and optimized backend services in Next.js with Prisma ORM and PostgreSQL, ensuring efficient data handling and scalability",
+      "Architected and implemented a dynamic, data-driven form generation system, integrating complex validation logic, business rules, and version control",
+      "Designed and implemented robust API endpoints, improving data integrity and system performance",
+      "Refactored and streamlined database queries to enhance efficiency and maintainability, reducing query execution times",
+      "Led the transition to Ant Design, standardizing the frontend while maintaining a focus on performance and usability"
+    ]
+  },
+  {
     "title": "Smart Medicine Cabinet",
     "tags": ["highlight", "school"],
     "subtitle": "Capstone Systems Design",
-    "year": "2023-2024",
+    "year": "2023 - 2024",
     "url": "https://github.com/madlitch/magicmirror",
     "keywords": "Raspberry Pi, IoT, FDM Printing, OnShape, MagicMirror, OpenCV, Node.js, Express, Sequelize, SQLite, MySQL, AWS RDS, AWS S3, Electron",
     "bulletpoints": [
+      "1st Place, Engineering Capstone Competition, Ontario Tech University",
       "Engineered and orchestrated the design and assembly of a smart medicine cabinet to enhance medication management for patients with dementia",
       "Designed and 3D printed medication dispensers with solenoid actuation, addressing mechanical challenges to reliably dispense medication",
       "Implemented computer vision algorithms using Python and OpenCV for medication intake verification, ensuring accurate tracking of patient consumption",
@@ -17,7 +33,7 @@
   },
   {
     "title": "Cloud ACC Simulation",
-    "tags": ["highlight", "school"],
+    "tags": ["school"],
     "subtitle": "Cloud Computing",
     "year": "2024",
     "url": "https://github.com/madlitch/acc_cloud_simulation",
@@ -63,7 +79,7 @@
   },
   {
     "title": "Distributed Jeopardy",
-    "tags": ["highlight", "school"],
+    "tags": ["school"],
     "subtitle": "Distributed Systems",
     "year": "2023",
     "url": "https://github.com/madlitch/distributed_jeopardy",
@@ -112,7 +128,7 @@
     "title": "MadPixelSort",
     "tags": ["current", "highlight", "startup"],
     "subtitle": "Commercial Application",
-    "year": "2021-2022",
+    "year": "2021 - Current",
     "url": "https://madpixel.software/madpixelsort",
     "keywords": "Rust, JavaScript, HTML, CSS, Electron, FFMpeg, Neon Bindings, Bootstrap, JQuery",
     "bulletpoints": [
@@ -128,7 +144,7 @@
     "title": "MadPixel Software",
     "tags": ["current", "startup"],
     "subtitle": "Website &  API",
-    "year": "2022",
+    "year": "2022 - Current",
     "url": "https://madpixel.software",
     "keywords": "Fastapi, Jinja, Bootstrap, JQuery, Sass, PostgreSQL",
     "bulletpoints": [
