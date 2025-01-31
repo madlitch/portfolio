@@ -12,14 +12,6 @@ import logging
 import random
 import string
 
-# uvicorn server:app --reload --host 0.0.0.0
-# stripe listen --forward-to 0.0.0.0:8080/webhook
-
-maintenance = MAINTENANCE
-debug = False
-if DEBUG == 1:
-    debug = True
-
 logging.basicConfig(filename='info.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -32,7 +24,7 @@ exceptions_handler = {
     404: not_found
 }
 
-app = FastAPI(exception_handlers=exceptions_handler, debug=debug, docs_url=None, redoc_url=None)
+app = FastAPI(exception_handlers=exceptions_handler, docs_url=None, redoc_url=None)
 
 
 @app.middleware('http')
@@ -53,13 +45,11 @@ async def startup():
     filename = "static/work.json"
     with open(filename, "r") as f:
         projects = json.load(f)
-    # await database.connect()
     return
 
 
 @app.on_event("shutdown")
 async def shutdown():
-    # await database.disconnect()
     return
 
 
@@ -67,9 +57,6 @@ app.mount("/static", StaticFiles(directory="{}static".format(APP_ROOT)), name="s
 templates = Jinja2Templates(directory="{}templates".format(APP_ROOT))
 
 
-# @app.get("/", response_class=HTMLResponse)
-# async def homepage(request: Request):
-#     return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
 @app.get("/resume", response_class=FileResponse)
 async def resume(request: Request):
     return FileResponse("static/assets/massimo_albanese_resume.pdf")
@@ -78,10 +65,3 @@ async def resume(request: Request):
 @app.get("/{full_path:path}", response_class=HTMLResponse)
 async def catch_all(request: Request, full_path: str):
     return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
-
-
-
-
-# @app.get("/{path}", response_class=HTMLResponse)
-# async def homepage(request: Request, path: str):
-#     return templates.TemplateResponse("index.html", {"request": request, "projects": projects})
