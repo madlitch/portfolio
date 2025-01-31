@@ -12,7 +12,7 @@
     <meta name="description" content="Software engineer, entrepreneur, digital artist">
     <link rel="stylesheet" href="/static/stylesheet.css">
 </head>
-<body onload="checkPathAndSwitchTab(); switchWorkFilter('highlight'); start();">
+<body onload="checkPathAndSwitchTab(); switchWorkFilter('current'); start();">
 <nav class="navbar navbar-expand-lg bg-dark mx-auto fixed-top" style="display: block; ">
     <div class="container mx-auto"
          style=" padding: 0; background-image: linear-gradient(90deg, #00C6FF, #FF00F6); background-size: 100vw; background-position: center">
@@ -79,9 +79,12 @@
                         </div>
                         <h1 class="d-inline m-0 p-0">.</h1>
                     </div>
-                    <h6 class="fw-900 grey">I'm a software engineer and digital artist. <br>
+                    <h6 class="fw-900 grey">I'm a full stack software engineer, digital artist, and entrepreneur.
+                    </h6>
+                    <div class="my-3"></div>
+                    <h6 class="fw-900 grey">
                         I founded and lead the development at <a target="_blank" href="https://madpixel.software/">MadPixel
-                            Software</a>.
+                        Software</a>.
                     </h6>
                     <div class="my-3"></div>
                     <h6 class="fw-900 grey">Get in touch via <a
@@ -181,16 +184,24 @@
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-end w-100 my-2">
-                                    <h5 class="m-0 lh-1 fw-900">Frameworks & Libraries</h5>
-                                    <p class="m-0 fw-600 grey">FastAPI, Flask, React, Node.js, Electron, Flutter</p>
+                                    <h5 class="m-0 lh-1 fw-900">Frameworks</h5>
+                                    <p class="m-0 fw-600 grey">React, Next.js, FastAPI, Flask, Node.js, Electron,
+                                        Flutter</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="text-end w-100 my-2">
-                                    <h5 class="m-0 lh-1 fw-900">Tools & Technologies</h5>
-                                    <p class="m-0 fw-600 grey">Git, IntelliJ Suite, Docker, PostgreSQL, MySQL, SQLite,
-                                        SQLAlchemy, Sequelize, OnShape, Solidworks, AutoCAD, FDM Printing, GCP, AWS,
-                                        ChatGPT, FFMpeg, Photoshop, Raspberry Pi, Arduino</p>
+                                    <h5 class="m-0 lh-1 fw-900">Technologies</h5>
+                                    <p class="m-0 fw-600 grey">Docker, PostgreSQL, MySQL, SQLite,
+                                        SQLAlchemy, Prisma, Sequelize, Raspberry Pi, Arduino</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="text-end w-100 my-2">
+                                    <h5 class="m-0 lh-1 fw-900">Tools & Platforms</h5>
+                                    <p class="m-0 fw-600 grey">Git, IntelliJ Suite, OnShape, Solidworks, AutoCAD, FDM
+                                        Printing, Microsoft Azure, Google Cloud Platform, LLMs, FFMpeg, Photoshop
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -242,6 +253,11 @@
                          onclick="switchWorkFilter('current')">
                         <h5 class="m-0 p-0 bg-dark text-lowercase">Current</h5>
                         <div class="underline-highlight zero-width current"></div>
+                    </div>
+                    <div class="d-inline-block mx-4 filter-button"
+                         onclick="switchWorkFilter('professional')">
+                        <h5 class="m-0 p-0 bg-dark text-lowercase">Professional</h5>
+                        <div class="underline-highlight zero-width professional"></div>
                     </div>
                     <div class="d-inline-block mx-4 filter-button"
                          onclick="switchWorkFilter('school')">
